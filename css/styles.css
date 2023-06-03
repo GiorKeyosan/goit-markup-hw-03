@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-black-color: #2E2F42;
     --secondary-black-color:#434455;
@@ -12,6 +18,7 @@ body {
 font-family: 'Roboto', sans-serif;
 color: var(--secondary-black-color);
 background-color: var(--page-background-colour);
+
 
 }
 
@@ -38,27 +45,53 @@ ul {
 
  
  .container {
-    width: 1128px;
+    /* width: 1158px; */
 padding-left: 15px;
 padding-right: 15px;
-margin-left: 0 auto;
+margin: 0 auto;
+
+
  }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+
 /**-------------------HEADER---------------------------*/
 
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    
+    
 }
 
 .header-navigation {
     display: flex;
     align-items: center;
+    
+    
 }
 
 .header-cont {
     display: flex;
+   
+        justify-content: space-between;
+        padding: 0 15px;
     align-items: center;
+    border-bottom: 1px solid #E7E9FC;
+    
 }
 .header-logo {
     font-family: 'Raleway',sans-serif;
@@ -67,7 +100,12 @@ margin-left: 0 auto;
         line-height: 1.17;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: var(--company-blue-color)
+        color: var(--company-blue-color);
+        display: flex;
+        padding-left: 156px;
+        padding-top: 25.5px;
+        padding-bottom: 25.5px;
+        margin-right: 76px;
         
 }
 
@@ -83,6 +121,12 @@ margin-left: 0 auto;
 .header-menu {
     list-style-type: none;
     display:flex;
+    align-items: center;
+        gap: 40px;
+        margin-right: 332px;
+        
+        
+        
 }
 
 .header-menu-item {
@@ -96,6 +140,8 @@ margin-left: 0 auto;
         letter-spacing: 0.02em;
         text-decoration: none;
         color: var(--primary-black-color);
+        padding-top: 24px;
+        padding-bottom: 24px;
 }
 .header-menu-link:hover, .header-menu-link:focus {
     color: #404BBF;
@@ -108,6 +154,10 @@ margin-left: 0 auto;
 }
 .contacts-list {
     display: flex;
+    gap: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
 }
 
 .contacts-item {}
@@ -127,16 +177,35 @@ margin-left: 0 auto;
 .hero {
  background-color: var(--primary-black-color);
 }
+
+.hero-container {
+
+
+}
+
 .hero-title {
+display: flex;
+    padding-top: 168px;
+    padding-bottom: 48px;
+    margin-left: 472px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
     letter-spacing: 0.02em;
     color: #FFFFFF;
+
+}
+
+.button-container {
+padding-bottom: 188px;
 }
 
 .btn {
+    display: flex;
+        padding: 16px 32px;
+        margin-left: 636px;
+        
     font-family: 'Roboto', sans-serif;
 font-style: normal;
 font-weight: 500;
@@ -157,6 +226,11 @@ cursor: pointer;
 
 .benefits {
 }
+.benefits-list {
+    display: flex;
+    margin-top: 120px;
+}
+
 
 .benefits-list-item {
 }
